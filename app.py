@@ -310,7 +310,8 @@ def download_audio(video_id: str) -> str:
     return output_file
 
 def transcribe_audio(audio_file):
-    aai.settings.api_key = os.getenv("ASSEMBLYAI_API_KEY")
+    aai.settings.api_key = st.secrets("ASSEMBLYAI_API_KEY")
+    # aai.settings.api_key = os.getenv("ASSEMBLYAI_API_KEY")
     
     config = aai.TranscriptionConfig(speech_models=["universal"])
     
