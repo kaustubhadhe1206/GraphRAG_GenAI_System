@@ -100,7 +100,7 @@ The UI is intentionally minimal to keep execution predictable and debuggable.
 
 The application is deployed on **Streamlit Cloud**, allowing it to run without local setup.
 Environment variables are managed through Streamlit secrets.
-
+Live on: https://graphraggenaisystem-gxqjgvgjojtps626dra3ve.streamlit.app/
 ---
 
 ## Why this project
