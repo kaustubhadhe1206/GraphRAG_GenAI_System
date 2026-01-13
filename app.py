@@ -51,15 +51,15 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv(dotenv_path=".env")
 
-GROQ_API_KEY = st.secrets("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 # GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-os.environ["HF_TOKEN"] = st.secrets("HF_TOKEN")
+os.environ["HF_TOKEN"] = st.secrets["HF_TOKEN"]
 # os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
-ASTRA_DB_TOKEN = st.secrets("ASTRA_DB_TOKEN")
+ASTRA_DB_TOKEN = st.secrets["ASTRA_DB_TOKEN"]
 # ASTRA_DB_TOKEN = os.getenv("ASTRA_DB_TOKEN")
-ASTRA_DB_ID = st.secrets("ASTRA_DB_ID")
+ASTRA_DB_ID = st.secrets["ASTRA_DB_ID"]
 # ASTRA_DB_ID = os.getenv("ASTRA_DB_ID")
-os.environ["GOOGLE_API_KEY"] = st.secrets("GOOGLE_API_KEY")
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 # os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 def data_ingestion(path_or_url, type_):
@@ -310,7 +310,7 @@ def download_audio(video_id: str) -> str:
     return output_file
 
 def transcribe_audio(audio_file):
-    aai.settings.api_key = st.secrets("ASSEMBLYAI_API_KEY")
+    aai.settings.api_key = st.secrets["ASSEMBLYAI_API_KEY"]
     # aai.settings.api_key = os.getenv("ASSEMBLYAI_API_KEY")
     
     config = aai.TranscriptionConfig(speech_models=["universal"])
